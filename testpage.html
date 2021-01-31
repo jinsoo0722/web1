@@ -5,20 +5,84 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
     <style>
-        .myDiv {
-            border: 5px outset red;
-            background-color: lightblue;
-            text-align: center;
+        body {
+            margin: 0px;
+        }
+
+        h1 {
+            border-bottom: 5px solid gray;
+            padding: 20px;
+            margin: 0px;
+        }
+
+        #grid ol {
+            border-right: 5px solid gray;
+            width: 80px;
+            margin: 0px;
+            padding-top: 10px;
+        }
+
+        #grid {
+            display: grid;
+            grid-template-columns: 150px 1fr;
+        }
+
+        #article {
+            padding-left: 40px;
+        }
+
+        @media(max-width: 800px) {
+            #grid {
+                display: block;
+            }
+
+            #grid ol {
+                border-right: none;
+            }
+
+            h1 {
+                border-bottom: none;
+            }
+
+            #article {
+                padding-left: 40px;
+            }
         }
     </style>
 </head>
 
 <body>
-    <h1>Hello World~</h1>
-    <div class="myDiv">
-        <h2>This is a heading in a div element</h2>
-        <p>This is some text in a div element.</p>
+    <h1>Title</h1>
+
+    <div id="grid">
+        <ol>
+            <li>list1</li>
+            <li>list2</li>
+            <li>list3</li>
+        </ol>
+        <div id="article">
+            <h2>list2</h2>
+            <p>[oh-my-zsh] Insecure completion-dependent directories detected:
+                drwxrwxr-x 7 hjs admin 224 12 25 15:29 /usr/local/share/zsh
+                drwxrwxr-x 4 hjs admin 128 12 25 12:28 /usr/local/share/zsh/site-functions
+
+                [oh-my-zsh] For safety, we will not load completions from these directories until
+                [oh-my-zsh] you fix their permissions and ownership and restart zsh.
+                [oh-my-zsh] See the above list for directories with group or other writability.
+
+                [oh-my-zsh] To fix your permissions you can do so by disabling
+                [oh-my-zsh] the write permission of "group" and "others" and making sure that the
+                [oh-my-zsh] owner of these directories is either root or your current user.
+                [oh-my-zsh] The following command may help:
+                [oh-my-zsh] compaudit | xargs chmod g-w,o-w
+
+                [oh-my-zsh] If the above didn't help or you want to skip the verification of
+                [oh-my-zsh] insecure directories you can set the variable ZSH_DISABLE_COMPFIX to
+                [oh-my-zsh] "true" before oh-my-zsh is sourced in your zshrc file.
+            </p>
+        </div>
     </div>
 </body>
 
