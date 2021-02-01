@@ -6,7 +6,9 @@
 #sidebar {
     border-right: 2px solid gray;
     font-size: x-large;
+    text-decoration-line: none;
     margin-bottom: 0px;
+    list-style: none;
 }
 
 #article {
@@ -21,6 +23,10 @@
 
 #body {
     padding: 20px;
+}
+
+a{
+    text-decoration: none;
 }
 
 @media (max-width: 1000px){
