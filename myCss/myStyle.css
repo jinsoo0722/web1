@@ -1,0 +1,30 @@
+#whole {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+}
+
+#sidebar {
+    border-right: 2px solid gray;
+    font-size: x-large;
+    margin-bottom: 0px;
+}
+
+#article {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.card {
+    border: 1px solid red;
+}
+
+#body {
+    padding: 20px;
+}
+
+@media (max-width: 1000px){
+    #article{
+        display: block;
+    }
+}
